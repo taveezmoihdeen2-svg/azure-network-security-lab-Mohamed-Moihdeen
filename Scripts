@@ -1,1 +1,19 @@
+# Example deploy-vnet
+az network vnet create \
+ --name vnet-project-cyberlab
+ --resource-group Azure Project \
+ --address-prefix 10.0.0.0/16 \
+ --subnet-name frontend-subnet \
+ --subnet-prefix 10.0.1.0/24 \
 
+az network nsg create --resource-group Azure Project --name NSG-cyberlab
+
+az network nsg rule create \
+ --resource-group Azure Project \
+ --nsg-name NsG-cyberlab \
+ --name Allow-SSH \
+ --protocol tcp \
+ --priority 100 \
+ --destination-port-range 22\
+ --access allow  \
+ --source-address-prefix 10.0.1.0/24 \
