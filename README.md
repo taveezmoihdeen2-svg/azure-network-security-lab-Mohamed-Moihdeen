@@ -9,4 +9,4 @@ This project demonstates a secure cloud network setup on Micrososft Azure, inclu
   -------------------------------------------------------------------------------------------------------------------
 
   ## Architecture
-  ![Network Architecture] (network-architecture-topology.png)
+  ![Network Architecture] (network-architecture-topology.png, network-architecture.png)
