@@ -21,3 +21,22 @@ az network nsg rule create \
  --destination-port-range 22\
  --access allow  \
  --source-address-prefix 10.0.1.0/24 
+
+
+## User Defined Routing (UDR)
+
+I implemented a User Defined Route to control outbound traffic from the application subnet and simulate a firewall using a Network Virtual Appliance (NVA).
+
+### Steps Completed:
+- Created a dedicated **nva-subnet**
+- Deployed a VM in the subnet to act as an **NVA (firewall simulation)**
+- Enabled **IP forwarding** on the VM
+- Created a **route table (rt-app-subnet)**
+- Added a route:
+  - Destination: `0.0.0.0/0`
+  - Next hop: Virtual Appliance
+  - Next hop IP: `10.0.3.4` (NVA private IP)
+- Associated the route table with the **app-subnet**
+
+### Outcome:
+All outbound traffic from the app subnet is now forced through the NVA before reaching the internet, simulating centralized traffic inspection and firewall control.
