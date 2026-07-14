@@ -17,5 +17,6 @@ This project demonstates a secure cloud network setup on Micrososft Azure, inclu
   - **Private Subnet:** 'backend-subnet' (10.0.2.0/24)
   - **NSG:** 'NSG-cyberlab' applied to 'frontend-subnet'
   - **Vnet Peering:** 'frontend-subnet' & 'backend-subnet
+  - **UDR using (NVA) - Application subnet traffic is routed through a dedicated Network Virtual Appliance (NVA) using User Defined Routes (UDRs) to simulate centralized firewall inspection before reaching the internet.
 
 -----------------------------------------------------------------------------------------------------------------------
