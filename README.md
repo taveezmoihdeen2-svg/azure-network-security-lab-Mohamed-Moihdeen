@@ -16,5 +16,6 @@ This project demonstates a secure cloud network setup on Micrososft Azure, inclu
   - **Public Subnet:** 'frontend-subnet' (10.0.1.0/24)
   - **Private Subnet:** 'backend-subnet' (10.0.2.0/24)
   - **NSG:** 'NSG-cyberlab' applied to 'frontend-subnet'
+  - **Vnet Peering:** 'frontend-subnet' & 'backend-subnet
 
 -----------------------------------------------------------------------------------------------------------------------
