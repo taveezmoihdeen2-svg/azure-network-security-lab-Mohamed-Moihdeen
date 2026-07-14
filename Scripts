@@ -40,3 +40,21 @@ I implemented a User Defined Route to control outbound traffic from the applicat
 
 ### Outcome:
 All outbound traffic from the app subnet is now forced through the NVA before reaching the internet, simulating centralized traffic inspection and firewall control.
+
+## VNet Peering
+
+Configured **Virtual Network Peering** between the **Production (Prod)** and **Security (Sec)** VNets to enable private communication over the Microsoft Azure backbone.
+
+### Configuration
+- Created VNet peering between **Prod → Sec**
+- Created VNet peering between **Sec → Prod**
+- Enabled **Allow virtual network access**
+- Enabled **Allow forwarded traffic** to support traffic inspection through the NVA
+- Configured **Gateway Transit** settings for future VPN/ExpressRoute support:
+  - **Prod VNet:** Allow gateway transit
+  - **Sec VNet:** Use remote gateways
+
+### Outcome
+- Secure, low-latency communication between VNets
+- Supports centralized network security using an NVA
+- Ready for future hybrid connectivity with shared VPN gateway
