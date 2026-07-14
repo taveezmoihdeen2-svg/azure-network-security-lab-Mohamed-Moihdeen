@@ -1,4 +1,4 @@
-# azure-network-security-lab-Mohamed-Moihdeen
+# network-security-lab- (Cloud) Mohamed-Moihdeen
 ## Overview
 This project demonstates a secure cloud network setup on Micrososft Azure, including: 
 - VNet with **public and private subnets**
